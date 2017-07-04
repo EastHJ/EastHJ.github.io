@@ -418,7 +418,7 @@
 <pre><code>SELECT TOP 页大小 *  
 FROM your_table_name  
 WHERE id NOT IN (  
-      SELECT TOP 页大小*(页数-1) id FROM table1 ORDER BY id  
+      SELECT TOP 页大小*(页数-1) id FROM your_table_name ORDER BY id  
        )  
 ORDER BY id 
 </code></pre><blockquote>
@@ -428,7 +428,7 @@ ORDER BY id
 <pre><code>SELECT TOP 页大小 *  
     FROM your_table_name  
     WHERE id IN (  
-          SELECT TOP 页大小*页数 id FROM table1 ORDER BY id  
+          SELECT TOP 页大小*页数 id FROM your_table_name ORDER BY id  
            )  
     ORDER BY id desc
 </code></pre><blockquote>
